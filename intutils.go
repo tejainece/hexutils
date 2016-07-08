@@ -59,3 +59,27 @@ func MakeUInt32FromByte(aB3, aB2, aB1, aB0 byte) uint32 {
 
 	return lRet
 }
+
+func GetByte0FromUInt32(aData uint32) byte {
+	return byte(aData & 0xFF)
+}
+
+func GetByte1FromUInt32(aData uint32) byte {
+	return byte((aData >> 8) & 0xFF)
+}
+
+func GetByte2FromUInt32(aData uint32) byte {
+	return byte((aData >> 16) & 0xFF)
+}
+
+func GetByte3FromUInt32(aData uint32) byte {
+	return byte((aData >> 24) & 0xFF)
+}
+
+func GetUInt160FromUInt32(aData uint32) uint16 {
+	return uint16(aData & 0xFFFF)
+}
+
+func GetUInt161FromUInt32(aData uint32) uint16 {
+	return uint16((aData >> 16) & 0xFFFF)
+}
