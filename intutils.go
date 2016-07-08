@@ -76,6 +76,22 @@ func GetByte3FromUInt32(aData uint32) byte {
 	return byte((aData >> 24) & 0xFF)
 }
 
+func GetUInt80FromUInt32(aData uint32) uint8 {
+	return uint8(aData & 0xFF)
+}
+
+func GetUInt81FromUInt32(aData uint32) uint8 {
+	return uint8((aData >> 8) & 0xFF)
+}
+
+func GetUInt82FromUInt32(aData uint32) uint8 {
+	return uint8((aData >> 16) & 0xFF)
+}
+
+func GetUInt83FromUInt32(aData uint32) uint8 {
+	return uint8((aData >> 24) & 0xFF)
+}
+
 func GetUInt160FromUInt32(aData uint32) uint16 {
 	return uint16(aData & 0xFFFF)
 }
