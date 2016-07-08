@@ -25,3 +25,37 @@ func MakeUInt32FromUInt16(aHi, aLo uint16) uint32 {
 
 	return lRet
 }
+
+func MakeUInt32FromUInt8(aB3, aB2, aB1, aB0 uint8) uint32 {
+	lRet := uint32(0)
+
+	lRet |= uint32(aB3)
+	lRet <<= 8
+
+	lRet |= uint32(aB2)
+	lRet <<= 8
+
+	lRet |= uint32(aB1)
+	lRet <<= 8
+
+	lRet |= uint32(aB0)
+
+	return lRet
+}
+
+func MakeUInt32FromByte(aB3, aB2, aB1, aB0 byte) uint32 {
+	lRet := uint32(0)
+
+	lRet |= uint32(aB3)
+	lRet <<= 8
+
+	lRet |= uint32(aB2)
+	lRet <<= 8
+
+	lRet |= uint32(aB1)
+	lRet <<= 8
+
+	lRet |= uint32(aB0)
+
+	return lRet
+}
