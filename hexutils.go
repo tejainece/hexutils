@@ -42,5 +42,5 @@ func ToUInt16(aBytes [4]byte) (uint16, error) {
 		return 0, ErrNotHex
 	}
 
-	return MakeUInt16(lDec), nil
+	return MakeUInt16BE(lDec), nil
 }
